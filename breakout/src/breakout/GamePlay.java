@@ -49,14 +49,14 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
 		map.draw((Graphics2D)g);
 		
 		//border
-		 g.fillRect(0, 0, 3, 592); // Left border
-		 g.fillRect(0, 0, 692, 3); // Top border
-		 g.fillRect(691, 0, 3, 592); // Right border
-		 g.fillRect(0, 591, 692, 3); // Bottom border
+		 g.fillRect(0, 0, 3, 592); 
+		 g.fillRect(0, 0, 692, 3); 
+		 g.fillRect(691, 0, 3, 592); 
+		 g.fillRect(0, 591, 692, 3); 
 		 
 		 g.setColor(Color.YELLOW);
-         g.setFont(new Font("serif", Font.BOLD, 25));
-         g.drawString("Score:" + score, 590, 30);
+        	 g.setFont(new Font("serif", Font.BOLD, 25));
+         	g.drawString("Score:" + score, 590, 30);
 		//paddle
 		g.setColor(Color.green);
 		g.fillRect(playerX,550,100,8);
@@ -94,7 +94,6 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
 		timer.start();
 		if(play) {
 			if(new Rectangle(ballposX,ballposY,20,20).intersects(new Rectangle(playerX,550,100,8))) {
